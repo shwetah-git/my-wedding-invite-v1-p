@@ -2,18 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import { pinyon } from '@/app/font'
-{/*
-  import { Great_Vibes } from 'next/font/google'
-  import { Pinyon_Script } from 'next/font/google'
-  const greatVibes = Great_Vibes({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-})
-const pinyon = Pinyon_Script({
-  weight: '400',
-  subsets: ['latin'],
-})*/}
 
 interface HeroSectionProps {
   isVisible: boolean
