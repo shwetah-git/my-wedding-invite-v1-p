@@ -17,7 +17,7 @@ const lora = Lora({
 
 export const metadata: Metadata = {
   title: 'Our Wedding Invitation',
-  description: 'You are cordially invited to celebrate our special day',
+  description: 'You are invited to be a part of our special day',
   generator: 'v0.app',
   icons: {
     icon: [
