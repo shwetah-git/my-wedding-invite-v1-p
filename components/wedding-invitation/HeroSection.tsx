@@ -1,20 +1,19 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { LotusPattern, FloralDivider } from './LotusPattern'
-import { Great_Vibes } from 'next/font/google'
-
-const greatVibes = Great_Vibes({
+import { pinyon } from '@/app/font'
+{/*
+  import { Great_Vibes } from 'next/font/google'
+  import { Pinyon_Script } from 'next/font/google'
+  const greatVibes = Great_Vibes({
   weight: '400',
-  subsets: ['latin']
+  subsets: ['latin'],
+  display: 'swap',
 })
-
-import { Pinyon_Script } from 'next/font/google'
-
 const pinyon = Pinyon_Script({
   weight: '400',
   subsets: ['latin'],
-})
+})*/}
 
 interface HeroSectionProps {
   isVisible: boolean
@@ -25,20 +24,25 @@ export function HeroSection({ isVisible }: HeroSectionProps) {
 
   useEffect(() => {
     if (isVisible) {
+    const timer = setTimeout(() => {
       setMounted(true)
-    }
+    }, 300) // delay for cinematic feel
+
+    return () => clearTimeout(timer)
+  }
   }, [isVisible])
 
-  if (!isVisible) return null
+  {/*if (!isVisible) return null*/}
 
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center px-4 overflow-hidden">
+    <section className={`relative min-h-screen w-full flex items-center justify-center px-4 overflow-hidden transition-all duration-[1200ms] ease-in-out ${
+    isVisible ? "opacity-100" : "opacity-0"}`}>
       
       {/* Background Image */}
       <img
         src="/OurPhotoTogether.png"
-        className={`flex inset-0 max-w-2xl justify-center h-full object-cover transition-all duration-[4000ms] ${
-          mounted ? "opacity-100 scale-100" : "opacity-0 scale-110"}`}
+        className={`absolute inset-0 w-full h-full object-cover object-[center_20%] justify-center transition-all duration-[7000ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          mounted ? "opacity-100 scale-100" : "opacity-30 scale-125"}`}
         alt="Wedding background"
       />
 

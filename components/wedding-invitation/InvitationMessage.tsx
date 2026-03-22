@@ -1,12 +1,7 @@
 'use client'
 
 import { LotusPattern, FloralDivider } from './LotusPattern'
-import { Pinyon_Script } from 'next/font/google'
-
-const pinyon = Pinyon_Script({
-  weight: '400',
-  subsets: ['latin'],
-})
+import { pinyon } from '@/app/font'
 
 export function InvitationMessage() {
   return (

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Playfair_Display, Lora } from 'next/font/google'
+import { Playfair_Display, Lora} from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import MusicPlayer from './MusicPlayer'
@@ -13,6 +13,7 @@ const lora = Lora({
   subsets: ["latin"],
   display: 'swap',
 })
+
 
 export const metadata: Metadata = {
   title: 'Our Wedding Invitation',

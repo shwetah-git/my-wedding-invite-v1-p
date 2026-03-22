@@ -2,13 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { FloralDivider } from './LotusPattern'
-
-import { Pinyon_Script } from 'next/font/google'
-
-const pinyon = Pinyon_Script({
-  weight: '400',
-  subsets: ['latin'],
-})
+import { pinyon } from '@/app/font'
 
 interface ScratchOffDateProps {
   day?: string
@@ -113,7 +107,7 @@ export function ScratchOffDate({
     const actualY = y - rect.top
 
     /** Responsive scratch radius */
-    const radius = Math.max(15, canvas.width * 0.04)
+    const radius = Math.max(25, canvas.width * 0.06)
 
     ctx.globalCompositeOperation = 'destination-out'
     ctx.beginPath()
@@ -122,7 +116,7 @@ export function ScratchOffDate({
 
     scratchCountRef.current++
 
-    if (scratchCountRef.current % 15 === 0) {
+    if (scratchCountRef.current % 8 === 0) {
       const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
       const data = imageData.data
 
@@ -134,7 +128,7 @@ export function ScratchOffDate({
       const percentage = (transparent / (data.length / 4)) * 100
       setRevealPercentage(percentage)
 
-      if (percentage > 50) {
+      if (percentage > 30) {
         setIsRevealed(true)
       }
     }
@@ -193,7 +187,7 @@ export function ScratchOffDate({
           <div className="relative bg-white rounded-xl overflow-hidden shadow-md h-[220px] sm:h-[260px] md:h-[320px] lg:h-[360px]">
             {/* Date Display - Hidden under scratch */}
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-primary/20 to-accent/20 px-4">
-              <div className={`text-center space-y-3 transition-all duration-1000 ${isRevealed ? 'blur-0 opacity-100' : 'blur-md opacity-20'}`}>
+              <div className={`text-center space-y-3 transition-all duration-1800 ${isRevealed ? 'blur-0 opacity-100' : 'blur-xl opacity-20'}`}>
                 {/*<svg
                   viewBox="0 0 600 230"
                   className={`w-full max-w-lg mx-auto ${isRevealed ? 'date-write' : ''}`}
