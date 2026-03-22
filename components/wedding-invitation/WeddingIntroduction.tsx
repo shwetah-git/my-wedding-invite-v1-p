@@ -2,14 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import { pinyon } from '@/app/font'
-
-{/*
-const pinyon = Pinyon_Script({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-})*/}
+//import { pinyon } from '@/app/font'
 
 interface WeddingIntroductionProps {
   onOpen: () => void
@@ -104,7 +97,8 @@ export function WeddingIntroduction({ onOpen }: WeddingIntroductionProps) {
 
           {/* Text Content */}
           <div className="text-center space-y-4 md:space-y-6 max-w-md mt-4 px-2 sm:px-0">
-            <h2 className={`${pinyon.className} text-4xl sm:text-5xl md:text-6xl leading-snug text-transparent bg-clip-text bg-gradient-to-r from-yellow-700 via-yellow-400 to-yellow-700`}>
+            <h2 className={`text-4xl sm:text-5xl md:text-6xl leading-snug text-transparent bg-clip-text 
+              bg-gradient-to-r from-yellow-700 via-yellow-400 to-yellow-700`} style={{ fontFamily: 'Pinyon Script, cursive' }}>
                   Wedding Invitation
             </h2>
             <div className="ornament-divider" />            

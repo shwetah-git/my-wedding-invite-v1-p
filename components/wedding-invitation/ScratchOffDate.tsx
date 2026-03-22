@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { FloralDivider } from './LotusPattern'
-import { pinyon } from '@/app/font'
+//import { pinyon } from '@/app/font'
 
 interface ScratchOffDateProps {
   day?: string
@@ -188,34 +188,13 @@ export function ScratchOffDate({
             {/* Date Display - Hidden under scratch */}
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-primary/20 to-accent/20 px-4">
               <div className={`text-center space-y-3 transition-all duration-1800 ${isRevealed ? 'blur-0 opacity-100' : 'blur-xl opacity-20'}`}>
-                {/*<svg
-                  viewBox="0 0 600 230"
-                  className={`w-full max-w-lg mx-auto ${isRevealed ? 'date-write' : ''}`}
-                >
-                  <text
-                    x="50%"
-                    y="70"
-                    textAnchor="middle"
-                    className={`${pinyon.className} text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-2 leading-tight break-words text-transparent bg-clip-text bg-gradient-to-r from-yellow-700 via-yellow-400 to-yellow-700`}
-                  >
-                    {day} {month} {year}
-                  </text>
-
-                  {/* TIME 
-                  <text
-                    x="50%"
-                    y="160"
-                    textAnchor="middle"
-                    className={`${pinyon.className} text-lg sm:text-xl md:text-2xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-700 via-yellow-400 to-yellow-700`}
-                  >
-                    {time}
-                  </text>
-                </svg>*/}
-                <p className={`${pinyon.className} date-text text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight break-words text-transparent bg-clip-text bg-gradient-to-r from-yellow-700 via-yellow-400 to-yellow-700`}>
+                <p className={`date-text text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight break-words text-transparent bg-clip-text bg-gradient-to-r 
+                  from-yellow-700 via-yellow-400 to-yellow-700`} style={{ fontFamily: 'Pinyon Script, cursive' }}>
                       {day} {month} {year}
                     </p>
 
-                    <p className={`${pinyon.className} date-time text-lg sm:text-xl md:text-2xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-700 via-yellow-400 to-yellow-700`}>
+                    <p className={`date-time text-lg sm:text-xl md:text-2xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-700 
+                      via-yellow-400 to-yellow-700`} style={{ fontFamily: 'Pinyon Script, cursive' }}>
                       {time}
                     </p>
                 

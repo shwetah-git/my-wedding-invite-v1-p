@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { pinyon } from '@/app/font'
+//import { pinyon } from '@/app/font'
 
 interface HeroSectionProps {
   isVisible: boolean
@@ -58,7 +58,8 @@ export function HeroSection({ isVisible }: HeroSectionProps) {
         <div className={`space-y-6 transition-all duration-1700 ${mounted ? 'opacity-100 translate-y-0 delay-[1200ms]' : 'opacity-0 translate-y-6'}`}>
           {/* Main message*/} 
           <div className="space-y-4">
-            <h2 className={`${pinyon.className} text-3xl sm:text-4xl md:text-4xl text-transparent leading-tight bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-100 to-yellow-300`}>
+            <h2 className={`text-3xl sm:text-4xl md:text-4xl text-transparent leading-tight 
+              bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-100 to-yellow-300`} style={{ fontFamily: 'Pinyon Script, cursive' }}>
               ✦The joy of two souls united in love✦
             </h2>
           </div>

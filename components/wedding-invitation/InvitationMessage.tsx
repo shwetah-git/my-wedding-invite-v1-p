@@ -1,7 +1,7 @@
 'use client'
 
 import { LotusPattern, FloralDivider } from './LotusPattern'
-import { pinyon } from '@/app/font'
+//import { pinyon } from '@/app/font'
 
 export function InvitationMessage() {
   return (
@@ -33,7 +33,8 @@ export function InvitationMessage() {
             </p>
 
             <div className="py-2 sm:py-4">
-              <p className={`${pinyon.className} text-3xl sm:text-4xl md:text-5xl leading-tight break-words mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-700 via-yellow-400 to-yellow-700`}>
+              <p className={`text-3xl sm:text-4xl md:text-5xl leading-tight break-words mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-700 
+                via-yellow-400 to-yellow-700`} style={{ fontFamily: 'Pinyon Script, cursive' }}>
                 Ms. Shweta Hegade
               </p>
               <p className="text-xs sm:text-sm text-foreground/60 mb-3 px-2">
@@ -44,7 +45,8 @@ export function InvitationMessage() {
                 &
               </p>
 
-              <p className={`${pinyon.className} text-3xl sm:text-4xl md:text-5xl leading-tight break-words mt-3 mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-700 via-yellow-400 to-yellow-700`}>
+              <p className={`text-3xl sm:text-4xl md:text-5xl leading-tight break-words mt-3 mb-2 text-transparent bg-clip-text bg-gradient-to-r 
+                from-yellow-700 via-yellow-400 to-yellow-700`} style={{ fontFamily: 'Pinyon Script, cursive' }}>
                 Mr. Tejas Pandhare
               </p>
               <p className="text-xs sm:text-sm text-foreground/60 px-2">
