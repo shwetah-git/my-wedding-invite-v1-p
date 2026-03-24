@@ -188,13 +188,19 @@ export function ScratchOffDate({
             {/* Date Display - Hidden under scratch */}
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-primary/20 to-accent/20 px-4">
               <div className={`text-center space-y-3 transition-all duration-1800 ${isRevealed ? 'blur-0 opacity-100' : 'blur-xl opacity-20'}`}>
-                <p className={`date-text text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight break-words text-transparent bg-clip-text bg-gradient-to-r 
-                  from-yellow-700 via-yellow-400 to-yellow-700`} style={{ fontFamily: 'Pinyon Script, cursive' }}>
+                <p className={`date-text text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight break-words text-transparent bg-clip-text bg-gradient-to-r 
+                  from-yellow-700 via-yellow-400 to-yellow-700`} 
+                  style={{ fontFamily: 'Pinyon Script, cursive', 
+                  WebkitTextStroke: '0.3px currentColor',
+                  textShadow: '0 4px 8px rgba(0,0,0,0.2)' }}>
                       {day} {month} {year}
                     </p>
 
-                    <p className={`date-time text-lg sm:text-xl md:text-2xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-700 
-                      via-yellow-400 to-yellow-700`} style={{ fontFamily: 'Pinyon Script, cursive' }}>
+                    <p className={`date-time text-2xl sm:text-3xl md:text-3xl lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r 
+                    from-yellow-800 via-yellow-400 to-yellow-800`} 
+                    style={{ fontFamily: 'Pinyon Script, cursive', 
+                  WebkitTextStroke: '0.3px currentColor',
+                  textShadow: '0 4px 8px rgba(0,0,0,0.2)' }}>
                       {time}
                     </p>
                 

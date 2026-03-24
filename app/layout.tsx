@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Playfair_Display, Lora} from 'next/font/google'
+import { Playfair_Display, Lora, Pinyon_Script} from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import MusicPlayer from './MusicPlayer'
@@ -13,6 +13,12 @@ const lora = Lora({
   subsets: ["latin"],
   display: 'swap',
 })
+
+const pinyon = Pinyon_Script({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-pinyon',
+});
 
 
 export const metadata: Metadata = {
@@ -43,6 +49,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  
   return (
     <html lang="en">
       <body className="antialiased" style={{ fontFamily: lora.style.fontFamily }}>
@@ -61,6 +68,7 @@ export default function RootLayout({
             font-family: ${lora.style.fontFamily};
           }
         `}</style>
+
       </body>
     </html>
   )

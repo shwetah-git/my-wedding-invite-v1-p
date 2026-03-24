@@ -467,6 +467,9 @@
 .text-color-dark-purple{
 color:#e8c3dc
 }
+.text-color-black{
+color:black
+}
 
 @keyframes goldPulse {
   0%, 100% {
@@ -493,6 +496,33 @@ color:#e8c3dc
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+
+.hero {
+  position: relative; /* so arrow positions relative to hero */
+}
+
+.scroll-indicator {
+  position: absolute;  /* absolute inside hero */
+  bottom: 45px;
+  right: 45px;
+  z-index: 10;         /* above hero content */
+  pointer-events: none;
+  text-align: justify;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  border-left: 4px solid rgb(16, 16, 15);
+  border-bottom: 4px solid rgb(11, 11, 11);
+  transform: rotate(-45deg);
+  animation: bounceArrow 1.5s infinite;
+}
+
+@keyframes bounceArrow {
+  0%, 100% { transform: rotate(-45deg) translateY(0); opacity: 0.6; }
+  50% { transform: rotate(-45deg) translateY(8px); opacity: 1; }
 }
 
 }

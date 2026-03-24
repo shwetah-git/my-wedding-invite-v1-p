@@ -17,26 +17,26 @@ interface TimelineSectionProps {
 const defaultEvents: TimelineEvent[] = [
   {
     time: '9:00 AM',
-    title: 'SAKHARPUDA: The Sacred Betrothal',
+    title: 'साखरपुडा : The Sacred Betrothal',
     description: 'A union blessed by both families',
     icon: <img src="/Sakharpuda-icon-2.jpg" alt="Sakharpuda ceremony icon" className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain"/>
   },
   {
     time: '11:00 AM',
-    title: 'HALAD: The Golden Benediction',
+    title: 'हळद : The Golden Benediction',
     description: 'Let us crown the couple in radiance and grace',
     icon: <img src="/Halad-icon.jpeg" alt="Halad ceremony icon" className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain"/>
   },
   {
     time: '4:30 PM',
-    title: 'MANGALSHTAKE: The Divine Ode',
+    title: 'मंगलाष्टके : The Divine Ode',
     description: 'to the holy matrimonial bond',
     icon: <img src="/Varmala-icon.jpeg" alt="Mangalshtake ceremony icon" className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain"/>
   },
   {
     time: '4:30 PM onwards',
     title: 'Wedding Feast',
-    description: 'Delicious cuisine and celebration',
+    description: 'Delicious Marathi cuisine and celebration',
     icon: <img src="/Wedding-feast.jpeg" alt="Food icon" className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain"/>
   }
 ]
@@ -62,6 +62,9 @@ export function TimelineSection({ events = defaultEvents }: TimelineSectionProps
 
         {/* Timeline Container */}
         <div className="bg-white/25 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-12 shadow-lg border border-primary/10">
+        <p className="text-xs sm:text-sm md:text-base text-center text-purple-900">
+          "All our wedding rituals will take place within a single day!"
+        </p>
           <div className="space-y-8 sm:space-y-10">
             {events.map((event, index) => (
               <div key={index} className="pb-8 border-b border-primary/10 last:border-none">
@@ -94,7 +97,10 @@ export function TimelineSection({ events = defaultEvents }: TimelineSectionProps
                         {event.time}
                       </p>
                       <h3 className="font-serif text-base sm:text-lg md:text-xl text-foreground break-words">
-                        {event.title}
+                        <span style={{ fontFamily: 'Noto Serif Devanagari, serif' }}>
+                          {/*{event.title.split(':')[0]} : {event.title.split(':')[1]}*/}
+                          {event.title}
+                        </span>
                       </h3>
                       <p className="text-sm sm:text-base text-purple-900">
                         {event.description}

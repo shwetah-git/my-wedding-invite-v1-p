@@ -60,7 +60,7 @@ export function InvitationMessage() {
             <div className="space-y-3 sm:space-y-4 px-2 sm:px-4">
 
               <p className="text-sm sm:text-base md:text-lg text-center text-foreground/90 leading-relaxed">
-                In the presence of family and cherished friends, we celebrate the new begining of a lifetime of beautiful memories together.
+                In the presence of family and cherished friends, we celebrate the new beginning of a lifetime of beautiful memories together.
                 <br/>Join us as we honor love, tradition, and the promise of tomorrow.
               </p>
             </div>
