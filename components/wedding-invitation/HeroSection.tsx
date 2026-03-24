@@ -46,7 +46,7 @@ useEffect(() => {
         onLoad={() => setImageLoaded(true)}
         className={`absolute inset-0 w-full h-full min-w-0 min-h-0 object-cover object-[center_20%] justify-center 
           transition-all duration-[4000ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
-          isAnimating ? "opacity-100 scale-100 blur-0" : "opacity-50 scale-130 blur-sm"} sm:scale-125 md:scale-115`}
+          isAnimating ? "opacity-100 scale-100 blur-0" : "opacity-50 scale-130 sm:scale-125 md:scale-115 blur-sm"}`}
           style={{
             maxWidth: '100vw',
             maxHeight: '100vh',
@@ -77,7 +77,7 @@ useEffect(() => {
 
       <div className="absolute z-10 left-1/2 -translate-x-1/2 bottom-[18%] sm:bottom-[20%] md:bottom-[22%] w-[90%] max-w-xl text-center min-w-0">
         {/* Main content */}
-        <div className={`space-y-6 transition-all duration-[4000ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${mounted ? 'opacity-100 delay-[800ms]' : 'opacity-0'}`}>
+        <div className={`space-y-6 transition-all duration-[4000ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${mounted ? 'opacity-100 delay-[2000ms]' : 'opacity-0'}`}>
           {/* Main message*/} 
           <div className="space-y-4">
             <h2 className={`text-2xl sm:text-3xl md:text-4xl text-transparent leading-tight 

@@ -36,7 +36,7 @@ const defaultEvents: TimelineEvent[] = [
   {
     time: '4:30 PM onwards',
     title: 'Wedding Feast',
-    description: 'Delicious Marathi cuisine and celebration',
+    description: 'Delicious Maharashtrian cuisine and celebration',
     icon: <img src="/Wedding-feast.jpeg" alt="Food icon" className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain"/>
   }
 ]
@@ -62,7 +62,7 @@ export function TimelineSection({ events = defaultEvents }: TimelineSectionProps
 
         {/* Timeline Container */}
         <div className="bg-white/25 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-12 shadow-lg border border-primary/10">
-        <p className="text-xs sm:text-sm md:text-base text-center text-purple-900">
+        <p className="text-xs sm:text-sm md:text-base text-center text-purple-900/20">
           "All our wedding rituals will take place within a single day!"
         </p>
           <div className="space-y-8 sm:space-y-10">
