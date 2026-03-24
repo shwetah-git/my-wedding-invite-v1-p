@@ -62,7 +62,7 @@ export function TimelineSection({ events = defaultEvents }: TimelineSectionProps
 
         {/* Timeline Container */}
         <div className="bg-white/25 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-12 shadow-lg border border-primary/10">
-        <p className="text-xs sm:text-sm md:text-base text-center text-purple-900/20">
+        <p className="text-xs sm:text-sm md:text-base text-center text-purple-900/70">
           "All our wedding rituals will take place within a single day!"
         </p>
           <div className="space-y-8 sm:space-y-10">
@@ -114,7 +114,7 @@ export function TimelineSection({ events = defaultEvents }: TimelineSectionProps
 
           {/* Bottom note */}
           <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-primary/5 rounded-xl text-center">
-            <p className="text-sm sm:text-base text-color-dark-purple/90">
+            <p className="text-xs sm:text-sm text-color-dark-purple/90">
               ✨ Bless us with your presence. Shower us with your grace. ✨
             </p>
           </div>
