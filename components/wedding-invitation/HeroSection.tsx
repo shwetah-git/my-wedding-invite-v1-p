@@ -46,7 +46,11 @@ useEffect(() => {
         onLoad={() => setImageLoaded(true)}
         className={`absolute inset-0 w-full h-full min-w-0 min-h-0 object-cover object-[center_20%] justify-center 
           transition-all duration-[4000ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
-          isAnimating ? "opacity-100 scale-100 blur-0" : "opacity-50 scale-115 blur-sm"}`}
+          isAnimating ? "opacity-100 scale-100 blur-0" : "opacity-50 scale-130 blur-sm"} sm:scale-125 md:scale-115`}
+          style={{
+            maxWidth: '100vw',
+            maxHeight: '100vh',
+          }}
         alt="Wedding background"
       />
 
@@ -76,18 +80,21 @@ useEffect(() => {
         <div className={`space-y-6 transition-all duration-[4000ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${mounted ? 'opacity-100 delay-[800ms]' : 'opacity-0'}`}>
           {/* Main message*/} 
           <div className="space-y-4">
-            <h2 className={`text-3xl sm:text-4xl md:text-4xl text-transparent leading-tight 
+            <h2 className={`text-2xl sm:text-3xl md:text-4xl text-transparent leading-tight 
               bg-clip-text bg-gradient-to-r from-white via-white to-white`} 
               style={{ fontFamily: 'Pinyon Script, cursive',WebkitTextStroke: '0.3px currentColor',
                   textShadow: '0 4px 8px rgba(0,0,0,0.2)' }
               }>
-              ✦The joy of two souls united in love✦
+              ✦ The joy of two souls united in love ✦
             </h2>
-          </div>
+            <div className="mt-6 flex justify-center">
+              <div className="bounce-wrapper">
+                <div className="arrow"></div>
+              </div>
+            </div>
+          </div>   
         </div>
       </div>
-
-      <div className=" scroll-indicator arrow"></div>
 
     </section>
 
