@@ -46,7 +46,7 @@ export function TimelineSection({ events = defaultEvents }: TimelineSectionProps
     <section className="w-full px-4 sm:px-6 py-12 sm:py-16 md:py-24 bg-gradient-to-b from-background to-secondary/10">
       <div className="relative max-w-3xl mx-auto overflow-hidden rounded-2xl bg-fixed md:bg-fixed bg-scroll will-change-transform"
       style={{
-        backgroundImage: 'url(/733.jpg)',
+        backgroundImage: 'url(/733.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>

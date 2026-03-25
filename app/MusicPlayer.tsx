@@ -14,7 +14,7 @@ export default function MusicPlayer() {
     <audio
       ref={audioRef}
       id="bg-music"
-      src="/AnandiGopalInstrumental.mp3"
+      src="/anandigopalinstrumental-2_db7kI8dI.mp3"
       loop
       preload="auto"
     />

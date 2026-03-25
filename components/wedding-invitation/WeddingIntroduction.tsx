@@ -32,7 +32,7 @@ export function WeddingIntroduction({ onOpen, onStart }: WeddingIntroductionProp
     
     const audio = document.getElementById('bg-music') as HTMLAudioElement
     if (audio) {
-      audio.volume = 0.9
+      audio.volume = 1.0
       audio.play().catch(err => console.log(err))
     }
     onStart();
@@ -64,7 +64,7 @@ export function WeddingIntroduction({ onOpen, onStart }: WeddingIntroductionProp
           duration-3000 ease-in-out will-change-transform z-10 backdrop-blur-sm ${
           isEnvelopeOpen ? '-translate-x-full rotate-y-12 origin-left' : ''}`} 
           style={{
-          backgroundImage: 'url(/733-left-1.jpg)',
+          backgroundImage: 'url(/733-left-1.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'left',
           }}
@@ -74,7 +74,7 @@ export function WeddingIntroduction({ onOpen, onStart }: WeddingIntroductionProp
           duration-3000 ease-in-out will-change-transform z-10 backdrop-blur-sm ${
           isEnvelopeOpen ? 'translate-x-full rotate-y-12 origin-right' : ''}`}
           style={{
-          backgroundImage: 'url(/733-right-1.jpg)',
+          backgroundImage: 'url(/733-right-1.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'right',
           }}
