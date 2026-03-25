@@ -69,6 +69,7 @@ export function WeddingIntroduction({ onOpen, onStart }: WeddingIntroductionProp
           backgroundPosition: 'left',
           }}
       />
+      {/* Envelope Split Panels-right */}
       <div
         className={`absolute top-0 right-0 w-1/2 h-full min-w-0 bg-gradient-to-b from-Golden/60 via-Golden/20 to-Golden/60 transition-transform 
           duration-3000 ease-in-out will-change-transform z-10 backdrop-blur-sm ${
@@ -79,6 +80,7 @@ export function WeddingIntroduction({ onOpen, onStart }: WeddingIntroductionProp
           backgroundPosition: 'right',
           }}
       />
+
       {/* Soft gradient overlay for readability 
       <div className="absolute inset-0 bg-gradient-to-b from-Golden/30 via-Golden/10 to-Golden/30"/>*/}
 

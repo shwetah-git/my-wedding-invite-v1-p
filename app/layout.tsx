@@ -52,6 +52,10 @@ export default function RootLayout({
   
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" as="image" href="/733-right-1.webp" />
+        <link rel="preload" as="image" href="/733-left-1.webp" />
+      </head>
       <body className="antialiased" style={{ fontFamily: lora.style.fontFamily }}>
         <MusicPlayer />
         {children}
