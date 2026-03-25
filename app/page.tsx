@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { WeddingIntroduction } from '@/components/wedding-invitation/WeddingIntroduction'
 import { HeroSection } from '@/components/wedding-invitation/HeroSection'
 import { InvitationMessage } from '@/components/wedding-invitation/InvitationMessage'
@@ -10,6 +10,7 @@ import { TimelineSection } from '@/components/wedding-invitation/TimelineSection
 import { RSVPForm } from '@/components/wedding-invitation/RSVPForm'
 
 export default function Home() {
+
   const [isInvitationOpen, setIsInvitationOpen] = useState(false)
   const [isOpening, setIsOpening] = useState(false)
   const [showHero, setShowHero] = useState(false)
@@ -25,7 +26,11 @@ export default function Home() {
   }
   const handleStart = () => {
   setShowHero(true)
-}
+  }
+  useEffect(() => {
+    // If user directly lands on homepage, clear old value
+    localStorage.removeItem('guestSide')
+  }, [])
 
 
   return (

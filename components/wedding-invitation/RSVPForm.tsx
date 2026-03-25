@@ -50,11 +50,16 @@ export function RSVPForm() {
     
     setIsLoading(true)
 
+    const guestSide = localStorage.getItem('guestSide') || 'unknown';
+
     try {
       // Simulate API call
       const response = await fetch('https://script.google.com/macros/s/AKfycbyIZtO2yx3GtbISZYScFczMsuEHF-qtAAxc04jKjV7X3VATOKu1Gl2mr--llF8VCKNi/exec', {
       method: 'POST',
-      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({...formData, side: guestSide}),
       mode: 'no-cors',
       })
 
@@ -63,7 +68,7 @@ export function RSVPForm() {
         name: '',
         attendance: 'yes',
         guests: '1',
-        message: ''
+        message: '',
       })
 
     } catch (err) {
