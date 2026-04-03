@@ -81,9 +81,9 @@ useEffect(() => {
           {/* Main message*/} 
           <div className="space-y-4">
             <h2 className={`text-2xl sm:text-3xl md:text-4xl text-transparent leading-tight 
-              bg-clip-text bg-gradient-to-r from-white via-white to-white`} 
+              bg-clip-text bg-gradient-to-r from-white via-rose-900 to-rose-900`} 
               style={{ fontFamily: 'Pinyon Script, cursive',WebkitTextStroke: '0.3px currentColor',
-                  textShadow: '0 4px 8px rgba(0,0,0,0.2)' }
+                  textShadow: '0 4px 8px rgba(240, 63, 166, 0.2)' }
               }>
               ✦ The joy of two souls united in love ✦
             </h2>

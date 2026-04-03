@@ -45,49 +45,14 @@ export function ScratchOffDate({
     ctx.fillStyle = gradient
     ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-    ctx.fillStyle = '#ffffff'
+    ctx.fillStyle = '#111010ff'
     ctx.font = `${Math.max(14, canvas.width * 0.04)}px sans-serif`
     ctx.textAlign = 'center'
     ctx.textBaseline = 'middle'
-    ctx.fillText('Scratch to reveal', canvas.width / 2, canvas.height / 2)
+    ctx.fillText('Scratch to reveal the date', canvas.width / 2, canvas.height / 2)
   }
 
   useEffect(() => {
-    /*const canvas = canvasRef.current
-    if (!canvas) return
-
-    const ctx = canvas.getContext('2d')
-    if (!ctx) return
-
-    // Set canvas size
-    const rect = canvas.parentElement?.getBoundingClientRect()
-    if (!rect) return
-
-    canvas.width = rect.width
-    canvas.height = rect.height
-
-    // Fill with gradient
-   /* const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height)
-    gradient.addColorStop(0, '#eea5caff')
-    gradient.addColorStop(1, '#e8c5b8')
-    ctx.fillStyle = gradient
-    ctx.fillRect(0, 0, canvas.width, canvas.height)
-    */
-
-    /* gold scratch foil layer 
-    const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height) 
-    gradient.addColorStop(0, '#d4af37') 
-    gradient.addColorStop(0.5, '#f5e6a7') 
-    gradient.addColorStop(1, '#caa93f')
-    ctx.fillStyle = gradient
-    ctx.fillRect(0, 0, canvas.width, canvas.height)
-
-    // Add scratch-off effect text
-    ctx.fillStyle = '#ffffff'
-    ctx.font = 'bold 18px Franklin Gothic Medium'
-    ctx.textAlign = 'center'
-    ctx.textBaseline = 'middle'
-    ctx.fillText('Scratch to reveal', canvas.width / 2, canvas.height / 2 - 20)*/
 
     setupCanvas()
     window.addEventListener('resize', setupCanvas)

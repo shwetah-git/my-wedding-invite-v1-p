@@ -89,8 +89,8 @@ export function WeddingIntroduction({ onOpen, onStart }: WeddingIntroductionProp
         <div className="flex flex-col items-center justify-center gap-8 sm:gap-10 md:gap-14">
           
           <div className="flex gap-8 relative z-20">
-            <h1 className={`text-sm sm:text-base md:text-lg leading-snug text-transparent text-center bg-clip-text 
-              bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 transition-all duration-2000 ease-out
+            <h1 className={`text-lg sm:text-lg md:text-xl leading-relaxed text-transparent text-center bg-clip-text 
+              bg-gradient-to-r from-stone-100 via-amber-50 to-stone-200 transition-all duration-2000 ease-out
               ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ fontFamily: 'Great Vibes, cursive' }}>
               Tap on the below seal to open the invitation</h1>
           </div>

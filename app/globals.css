@@ -509,8 +509,8 @@ color:black
 .arrow {
   width: 20px;
   height: 20px;
-  border-left: 6px solid rgb(232, 232, 229);
-  border-bottom: 6px solid rgb(205, 204, 204);
+  border-left: 6px solid rgb(255, 255, 255);
+  border-bottom: 6px solid rgb(255, 255, 255);
   transform: rotate(-45deg);  /* keeps the arrow pointing down */
 }
 
