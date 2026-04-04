@@ -1,9 +1,23 @@
 'use client'
 
 import { LotusPattern, FloralDivider } from './LotusPattern'
-//import { pinyon } from '@/app/font'
+import { usePathname } from 'next/navigation'
 
 export function InvitationMessage() {
+
+  const pathname = usePathname()
+  const isBrideFirst = pathname.includes('/bride')
+  const bride = {
+    name: "Ms. Shweta Hegade",
+    parents: "daughter of Mr. Uttam Pralhad Hegade & Mrs. Mangal Uttam Hegade"
+  }
+  const groom = {
+    name: "Mr. Tejas Pandhare",
+    parents: "son of Mr. Suresh Dattu Pandhare & Mrs. Sangeeta Suresh Pandhare"
+  }
+  const firstPerson = isBrideFirst ? bride : groom
+  const secondPerson = isBrideFirst ? groom : bride
+
   return (
     <section className="w-full px-4 sm:px-6 py-12 sm:py-16 md:py-24 bg-gradient-to-b from-background to-secondary/10">
       <div className="max-w-2xl mx-auto">
@@ -35,10 +49,10 @@ export function InvitationMessage() {
             <div className="py-2 sm:py-4">
               <p className={`text-3xl sm:text-4xl md:text-5xl leading-tight break-words mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-700 
                 via-yellow-400 to-yellow-700`} style={{ fontFamily: 'Pinyon Script, cursive' }}>
-                Ms. Shweta Hegade
+                {firstPerson.name}
               </p>
               <p className="text-xs sm:text-sm text-foreground/60 mb-3 px-2">
-                daughter of Mr. and Mrs. Uttam Pralhad Hegade
+                {firstPerson.parents}
               </p>
 
               <p className="text-lg sm:text-xl text-primary/60 font-serif">
@@ -47,10 +61,10 @@ export function InvitationMessage() {
 
               <p className={`text-3xl sm:text-4xl md:text-5xl leading-tight break-words mt-3 mb-2 text-transparent bg-clip-text bg-gradient-to-r 
                 from-yellow-700 via-yellow-400 to-yellow-700`} style={{ fontFamily: 'Pinyon Script, cursive' }}>
-                Mr. Tejas Pandhare
+                {secondPerson.name}
               </p>
               <p className="text-xs sm:text-sm text-foreground/60 px-2">
-                son of Mr. and Mrs. Suresh Dattu Pandhare
+                {secondPerson.parents}
               </p>
             </div>
 

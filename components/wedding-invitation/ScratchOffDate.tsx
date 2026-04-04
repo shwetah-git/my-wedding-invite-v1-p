@@ -45,7 +45,7 @@ export function ScratchOffDate({
     ctx.fillStyle = gradient
     ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-    ctx.fillStyle = '#111010ff'
+    ctx.fillStyle = '#757272ff'
     ctx.font = `${Math.max(14, canvas.width * 0.04)}px sans-serif`
     ctx.textAlign = 'center'
     ctx.textBaseline = 'middle'
